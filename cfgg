@@ -1,0 +1,38 @@
+//持枪视角
+viewmodel_fov 68; viewmodel_offset_x 2.5; viewmodel_offset_y 2; viewmodel_offset_z -2; viewmodel_presetpos 0;
+
+//══════════════════════    3. 雷达设置    ════════════════════════════════════
+
+cl_radar_always_centered "0" 	//雷达是否居中（1是，0不是），个人喜好，不居中不会出现太多黑边	
+cl_radar_scale "0.4"                //雷达缩放（0.25-1越小，小地图看到的东西越小越多）
+cl_hud_radar_scale "1.25"//雷达大小（0.8-1.3越大，小地图越大）
+
+bind "v"  "+voicerecord"                                  //说话
+
+//─────────────────────    固定滚轮跳的指令  //BYRW  ────────────────────────────────
+
+bind "MWHEELUP" "+jump"
+bind "MWHEELDOWN" "+jump"
+
+
+//──────────────────    跳投  //BYRW  ────────────────────
+alias +jp "+jump;-jump"
+alias +ak "-attack;-attack2"
+bind t "+jp;+ak"
+
+alias +opHJump "+jump;+duck;";
+alias -opHJump "-jump;-duck;";
+bind "x" "+opHJump;";//大跳
+
+//──────────────────    其他设置  //BYRW  ────────────────────
+//r_show_build_info false   //清除游戏左下角水印
+r_fullscreen_gamma 2.6; //游戏亮度gama值
+cq_netgraph 1  //显示网络状况
+fps_max 160
+
+engine_low_latency_sleep_after_client_tick true //帧数平滑算法//BYRW
+
+//BYRW
+echo Config Loaded!
+//BYRW
+clear 
